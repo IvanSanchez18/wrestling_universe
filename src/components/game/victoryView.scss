@@ -1,0 +1,67 @@
+.victory-screen {
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle, #000 40%, #100 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: fadeIn 0.6s ease-out;
+}
+
+.victory-content {
+    text-align: center;
+    color: #fff;
+    font-family: "Press Start 2P", monospace;
+    padding: 0 5vw;
+}
+
+.victory-title {
+    font-size: clamp(32px, 8vw, 64px);
+    color: #ff2e2e;
+    text-shadow: 0 0 10px #ff0000;
+    animation: pulse 1.2s infinite;
+}
+
+.victory-subtitle {
+    margin-top: 20px;
+    font-size: clamp(12px, 4vw, 18px);
+    opacity: 0.85;
+}
+
+.victory-divider {
+    width: clamp(100px, 40vw, 200px);
+    height: 4px;
+    background: #ff2e2e;
+    margin: 3vh auto;
+}
+
+.victory-run {
+    font-size: clamp(10px, 3vw, 14px);
+    letter-spacing: 2px;
+    opacity: 0.7;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

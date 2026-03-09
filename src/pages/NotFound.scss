@@ -1,0 +1,48 @@
+.not-found-wrapper {
+    height: 100vh;
+    width: 100%;
+    background: var(--bg-app);
+    padding: 40px;
+    box-sizing: border-box;
+
+    .not-found-content {
+        max-width: 700px;
+        width: 100%;
+        border-left: 4px solid var(--accent);
+        padding: 20px 0 20px 40px;
+        background: linear-gradient(90deg, rgba(225, 6, 0, 0.03) 0%, transparent 100%);
+
+        .error-code {
+            font-size: clamp(4rem, 10vw, 7rem);
+            font-weight: 900;
+            margin: 0;
+            letter-spacing: -3px;
+            line-height: 0.9;
+            color: var(--text-main);
+        }
+
+        .divider {
+            width: 40px;
+            height: 2px;
+            background-color: var(--border-soft);
+            margin: 25px 0;
+        }
+
+        .error-status {
+            font-size: 1.25rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+            color: var(--accent);
+        }
+
+        .error-message {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: var(--text-soft);
+            margin: 0;
+            max-width: 450px;
+        }
+    }
+}

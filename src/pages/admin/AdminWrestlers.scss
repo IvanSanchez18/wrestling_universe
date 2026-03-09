@@ -1,0 +1,392 @@
+.admin-wrestlers {
+  min-height: 100vh;
+  padding: 24px;
+  background: var(--bg-app);
+  color: var(--text-main);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.admin-header h2 {
+  margin: 0;
+  color: var(--text-main);
+}
+
+.filters-container {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+
+  .admin-input {
+    padding: 12px 16px;
+    border: 1px solid var(--border-main);
+    background: var(--bg-input);
+    color: var(--text-main);
+    border-radius: 4px;
+    outline: none;
+    flex: 1;
+    min-width: 200px;
+    font-size: 14px;
+
+    &:focus {
+      border-color: var(--accent);
+    }
+  }
+}
+
+.wrestlers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.no-results {
+  color: var(--text-muted);
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 20px;
+}
+
+.wrestler-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-main);
+  box-shadow: var(--shadow-card);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.wrestler-image {
+  width: 100%;
+  max-width: 260px;
+  aspect-ratio: 1 / 1;
+  margin-bottom: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border-soft);
+  background: var(--bg-input);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 100% !important;
+    object-fit: cover;
+  }
+
+  .overall-badge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 55px;
+    height: 60px;
+    background: var(--accent);
+    color: var(--white);
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 7px;
+    padding-right: 21px;
+    font-weight: 900;
+    font-size: 18px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+  }
+}
+
+.wrestler-info {
+  margin-bottom: 12px;
+  width: 100%;
+
+  h3 {
+    margin: 0 0 8px 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-main);
+  }
+
+  .brand-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 20px;
+    color: black;
+
+    &.raw {
+      background-color: #d32f2f;
+    }
+
+    &.smackdown {
+      background-color: #1976d2;
+    }
+
+    &.nxt {
+      background-color: #f5e90c;
+
+    }
+
+    &.none {
+      background-color: #4b2d73;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .admin-wrestlers {
+    padding: 16px;
+  }
+
+  .filters-container {
+    flex-direction: column;
+  }
+
+  .wrestlers-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wrestler-image {
+    max-width: 100%;
+  }
+}
+
+.filters-container {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+
+  .admin-input {
+    padding: 12px 16px;
+    border: 1px solid var(--border-main);
+    background: var(--bg-input);
+    color: var(--text-main);
+    border-radius: 4px;
+    outline: none;
+    flex: 1;
+    min-width: 180px;
+    font-size: 14px;
+
+    &:focus {
+      border-color: var(--accent);
+    }
+
+    &.small-number {
+      min-width: 60px;
+      flex: 0 1 auto;
+      padding: 12px 8px;
+      text-align: center;
+    }
+  }
+
+  .range-filter {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-main);
+    font-size: 14px;
+    font-weight: 600;
+  }
+}
+
+.wrestler-image img {
+  width: 100%;
+  height: 100% !important;
+  object-fit: cover;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.pagination-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border-soft);
+
+  .items-per-page {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--text-main);
+    font-size: 14px;
+    font-weight: 600;
+
+    .per-page-toggle {
+      display: flex;
+      background: var(--bg-card);
+      border: 1px solid var(--border-main);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .toggle-btn {
+      padding: 6px 14px;
+      background: transparent;
+      color: var(--text-main);
+      border: none;
+      border-right: 1px solid var(--border-main);
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 13px;
+      transition: all 0.2s ease;
+
+      &:last-child {
+        border-right: none;
+      }
+
+      &:hover:not(.active) {
+        background: var(--bg-input);
+      }
+
+      &.active {
+        background: var(--accent);
+        color: var(--white);
+      }
+    }
+  }
+
+  .pagination-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+
+    .page-info {
+      color: var(--text-main);
+      font-weight: 600;
+      font-size: 14px;
+      margin: 0 12px;
+    }
+
+    .btn-paginate {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      background: var(--bg-card);
+      color: var(--text-main);
+      border: 1px solid var(--border-main);
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+
+      i {
+        font-size: 14px;
+      }
+
+      &:hover:not(:disabled) {
+        background: var(--accent);
+        color: var(--white);
+        border-color: var(--accent);
+      }
+
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        background: var(--bg-input);
+        color: var(--text-muted);
+      }
+    }
+  }
+}
+
+.theme-badge {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  color: var(--white);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 14px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--border-soft);
+}
+
+.gender-icon {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-left: 6px;
+  opacity: 0.7;
+}
+
+.filters-container {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+
+  .admin-input {
+    flex: 1 1 auto;
+  }
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+
+  h2 {
+    margin: 0;
+    font-size: 24px;
+    color: var(--text-main);
+  }
+
+  .btn-create {
+    background: var(--accent);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      filter: brightness(1.1);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+
+    i {
+      font-size: 12px;
+    }
+  }
+}

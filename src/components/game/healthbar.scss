@@ -1,0 +1,44 @@
+.sf-health-container {
+    width: 45%;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sf-name {
+    font-size: clamp(10px, 3vw, 18px);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffd700;
+    text-shadow: 2px 2px 0 #000;
+}
+
+.sf-bar-wrapper {
+    border: clamp(2px, 0.5vw, 4px) solid #000;
+    background: #222;
+    padding: 2px;
+    box-shadow: 0 0 10px #ff0000;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.sf-bar-bg {
+    height: clamp(15px, 3vh, 25px);
+    background: #444;
+    overflow: hidden;
+    width: 100%;
+}
+
+.sf-bar-fill {
+    height: 100%;
+    background: linear-gradient(to right, #ffff00 0%, #ffcc00 40%, #ff0000 100%);
+    transition: width 0.4s ease-out;
+}
+
+.sf-char-img {
+    width: clamp(35px, 10vw, 70px);
+    margin-top: 1vh;
+    filter: drop-shadow(2px 4px 2px black);
+}
