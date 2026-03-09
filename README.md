@@ -9,6 +9,8 @@ Our platform offers a complete experience inspired by the WWE Universe mode, des
 * **Minigames:** Currently featuring one available title where you choose one of 12 characters and battle the other 11 in matches up to three rounds, adding a quick, competitive challenge to the experience.
 * **Admin Dashboard:** An exclusive view for administrators to manage the core content of the site. It allows creating, modifying, and deleting wrestlers, as well as assigning their theme songs.
 * **Authentication:** All features are protected by user authentication. Unauthenticated users are automatically redirected to the login page. The app also includes a registration view and a 404 error page to ensure complete and coherent navigation.
+* **Progressive Web App (PWA):** The app is installable on desktop and mobile devices.
+* **Android Native App:** A native Android version built with React Native (Expo) is available, encapsulating the responsive web experience.
 
 ## Framework & Libraries
 This project is built using **React** with **Vite** as the bundler.
@@ -35,14 +37,18 @@ This project is built using **React** with **Vite** as the bundler.
 * i18next-browser-languagedetector (`^8.2.0`)
 * i18next-http-backend (`^3.0.2`)
 
+**Deployment & PWA Tools:**
+* gh-pages (`^6.3.0`) - *GitHub Pages Deployment*
+* vite-plugin-pwa (`^1.2.0`) - *PWA Support*
+
 ## License
-This project is licensed under the MIT License - see the LICENSE file for details. *(Note: Ensure you create a LICENSE file if you haven't already).*
+This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Installation Guide
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/your-username/wrestling_universe.git](https://github.com/your-username/wrestling_universe.git)
+   git clone [https://github.com/IvanSanchez18/wrestling_universe.git](https://github.com/IvanSanchez18/wrestling_universe.git)
    cd wrestling_universe
 2. **Install dependencies:**
    ```bash

@@ -11,7 +11,7 @@ const Home = () => {
       <div className="home__left">
         <HomeCard
           title={t("universe")}
-          image="/images/universe.jpg"
+          image="/wrestling_universe/images/universe.jpg"
           to="/universe"
           focusX="50%"
           focusY="20%"
@@ -21,7 +21,7 @@ const Home = () => {
       <div className="home__right">
         <HomeCard
           title={t("options")}
-          image="/images/options.jpg"
+          image="/wrestling_universe/images/options.jpg"
           to="/options"
           focusX="60%"
           focusY="1%"
@@ -29,7 +29,7 @@ const Home = () => {
         />
         <HomeCard
           title={t("jukebox")}
-          image="/images/jukebox.jpg"
+          image="/wrestling_universe/images/jukebox.jpg"
           to="/jukebox"
           focusX="50%"
           focusY="10%"

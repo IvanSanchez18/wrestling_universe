@@ -10,21 +10,21 @@ import "../../styles/theme.scss";
 import "./options.scss";
 
 const LANGUAGES = [
-  { code: "es", flag: "/images/flags/es.png" },
-  { code: "en", flag: "/images/flags/us.png" },
-  { code: "jp", flag: "/images/flags/jp.png" },
-  { code: "fr", flag: "/images/flags/fr.png" },
-  { code: "it", flag: "/images/flags/it.png" },
-  { code: "pt-BR", flag: "/images/flags/br.png" },
-  { code: "kr", flag: "/images/flags/kr.png" },
-  { code: "tr", flag: "/images/flags/tr.png" },
-  { code: "pl", flag: "/images/flags/pl.png" },
-  { code: "hi", flag: "/images/flags/in.png" },
-  { code: "es-MX", flag: "/images/flags/mx.png" },
-  { code: "hu", flag: "/images/flags/hu.png" },
-  { code: "id", flag: "/images/flags/id.png" },
-  { code: "fil", flag: "/images/flags/ph.png" },
-  { code: "zh-CN", flag: "/images/flags/china.png" },
+  { code: "es", flag: "/wrestling_universe/images/flags/es.png" },
+  { code: "en", flag: "/wrestling_universe/images/flags/us.png" },
+  { code: "jp", flag: "/wrestling_universe/images/flags/jp.png" },
+  { code: "fr", flag: "/wrestling_universe/images/flags/fr.png" },
+  { code: "it", flag: "/wrestling_universe/images/flags/it.png" },
+  { code: "pt-BR", flag: "/wrestling_universe/images/flags/br.png" },
+  { code: "kr", flag: "/wrestling_universe/images/flags/kr.png" },
+  { code: "tr", flag: "/wrestling_universe/images/flags/tr.png" },
+  { code: "pl", flag: "/wrestling_universe/images/flags/pl.png" },
+  { code: "hi", flag: "/wrestling_universe/images/flags/in.png" },
+  { code: "es-MX", flag: "/wrestling_universe/images/flags/mx.png" },
+  { code: "hu", flag: "/wrestling_universe/images/flags/hu.png" },
+  { code: "id", flag: "/wrestling_universe/images/flags/id.png" },
+  { code: "fil", flag: "/wrestling_universe/images/flags/ph.png" },
+  { code: "zh-CN", flag: "/wrestling_universe/images/flags/china.png" },
 ];
 
 export default function Options() {
